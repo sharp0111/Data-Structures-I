@@ -8,14 +8,17 @@ class Queue {
   constructor() {
     this.storage = [];
   }
-  enqueue(value) {
-    this.storage.unshift(value);
+  get size() {
+    return this.storage.length;
+  }
+  enqueue(item) {
+    this.size++;
+    this.storage.unshift(item);
   }
   dequeue() {
-    return this.storage.shift();
-  }
-  size() {
-    return this.storage.length;
+    // The shift() method removes the first element from an array and
+    // returns that removed element. This method changes the length of the array.
+    return this.storage.pop();
   }
 }
 

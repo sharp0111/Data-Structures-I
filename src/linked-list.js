@@ -1,4 +1,6 @@
 /* eslint-disable class-methods-use-this */
+
+/* eslint-disable */
 class LinkedList {
   constructor() {
     this.head = null;

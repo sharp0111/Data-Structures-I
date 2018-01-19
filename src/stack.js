@@ -9,8 +9,38 @@ class Stack {
   constructor() {
     this.storage = [];
   }
-  push(value) { this.storage.push(value); }
-  pop() { return this.storage.pop(); }
-  size() { return this.storage.length; }
+  get size() {
+    return this.storage.length;
+  }
+  push(item) {
+    this.storage.push(item);
+  }
+  pop() {
+    return this.storage.pop();
+  }
 }
+
+// class Stack {
+//   constructor() {
+//     this.storage = [];
+//     this.count = 0;
+//   }
+//   get size() {
+//     return this.count;
+//   }
+//   push(input) {
+//     this.storage[this.size] = input;
+//     this.count++;
+//     return this.count;
+//   }
+//   pop() {
+//     if (this.size === 0) return null;
+//     const popped = this.storage[this.size - 1];
+//     this.storage[this.size - 1] = null;
+//     this.count--;
+//     return popped;
+//   }
+// }
+
+
 module.exports = Stack;
